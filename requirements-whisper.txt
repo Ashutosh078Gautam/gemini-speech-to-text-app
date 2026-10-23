@@ -1,0 +1,8 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+faster-whisper==1.1.0
+# faster-whisper 1.1.0 passes metadata_errors to av.open(). Keep PyAV at a
+# modern version, while allowing pip to choose the newest wheel available for
+# the user's Python version instead of forcing a source build.
+av>=11,<15

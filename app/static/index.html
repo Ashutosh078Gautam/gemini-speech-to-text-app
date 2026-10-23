@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Procucev Speech to Text</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar"><div><p class="eyebrow">PROCUCEV AI</p><h1>Speech to Text</h1></div><span class="status-pill"><i></i> Local workspace</span></header>
+    <section class="hero"><div><p class="eyebrow">REAL-TIME TRANSCRIPTION</p><h2>Speak naturally.<br><em>Capture clearly.</em></h2><p class="lede">Record multilingual conversations in real time, then keep a searchable history of every transcription.</p></div><div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></section>
+    <section class="workspace">
+      <div class="recorder card">
+        <div class="card-head"><div><p class="eyebrow">LIVE CAPTURE</p><h3>Talk to your transcript</h3></div><span id="recordingState" class="recording-state">Ready</span></div>
+        <div class="language-row"><label for="provider">Transcription engine</label><select id="provider"><option value="gemini" selected>Gemini Live (default)</option><option value="browser">Browser (real-time)</option><option value="whisper">Self-hosted Whisper</option></select><label for="language">Language</label><select id="language"><option value="en-IN">English + Indian accents</option><option value="hi-IN">Hindi</option><option value="en-US">English (US)</option></select></div>
+        <div id="transcript" class="transcript" contenteditable="true" data-placeholder="Your words will appear here…"></div>
+        <div class="recorder-foot"><span id="timer">00:00</span><div class="actions"><button id="clearBtn" class="button subtle">Clear</button><button id="recordBtn" class="button primary"><span class="mic">●</span> Start speaking</button><button id="saveBtn" class="button save">Save transcript</button></div></div>
+        <p id="supportMessage" class="support-message"></p>
+      </div>
+      <aside class="history card"><div class="card-head"><div><p class="eyebrow">YOUR LIBRARY</p><h3>Transcription history</h3></div><span id="count" class="count">0</span></div><input id="search" class="search" placeholder="Search transcripts…" /><div id="historyList" class="history-list"></div></aside>
+    </section>
+    <footer><span>Built for the Procucev AI Tech Hiring Assignment</span><span>FastAPI · SQLAlchemy · Browser Speech API</span></footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
